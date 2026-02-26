@@ -1,25 +1,33 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import HomePage from './features/homePage';
+import QuizPage from './features/quizPage';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [page, setPage] = useState('home');
+  
+  const renderPage = () => {
+    return page === 'home' ? <HomePage /> : <QuizPage />;
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header>
+        <h1>Quizlet</h1>
+        <h2 id='homeButton' className="button">
+          <button onClick={() => setPage('home')}>Home</button>
+        </h2>
       </header>
+      <main>
+        {renderPage()}
+      </main>
+      <footer>
+        <h2 id='quizButton' className="button">
+          <button onClick={() => setPage('quiz')}>Start Quiz</button>
+        </h2>
+      </footer>
     </div>
   );
-}
+};
 
 export default App;

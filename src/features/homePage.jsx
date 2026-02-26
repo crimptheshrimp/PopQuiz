@@ -3,7 +3,7 @@ import randomPicture from 'notyetdefined';
 
 //hosts the data for the home page, containing quiz instructions and an example question. It also features some pictures of the artists for some colour and differentiation.
 
-export const HomePage = () => {
+const HomePage = () => {
     return <div>
             <p>This quiz will test your ability to NAME THAT POP SINGER. Please read through the how to rules below before continuing, and see the example question to understand the quiz. Click 'Start Quiz' when you are ready!</p>
                 <h3><strong>How to quiz :</strong></h3>
@@ -14,7 +14,9 @@ export const HomePage = () => {
                     <li>You will be asked the 5 questions in a random order</li>
                     <li>Videos will be supplied with captions to help</li>
                 </ul>
-                <img src={randomPicture[0]} />
-                <img src={randomPicture[1]} />
+                <img src={randomPicture[0]} alt='Pop singer' />
+                <img src={randomPicture[1]} alt='Another pop singer' />
         </div>
 }
+
+export default HomePage;
