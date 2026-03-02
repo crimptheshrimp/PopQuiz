@@ -13,14 +13,15 @@ const App = () => {
   return (
     <div>
       <header>
-        <h1>Quizlet</h1>
-          <button onClick={() => setPage('home')}>Home</button>
+        <h1 id="app-title">Quizlet
+          <button  id="home-button" onClick={() => setPage('home')}>Home</button>
+        </h1>
       </header>
       <main>
         {renderPage()}
       </main>
       <footer>
-        <button onClick={() => setPage('quiz')} disabled={page==='quiz'}>Start Quiz</button>
+        <button id="start-quiz-button" onClick={() => setPage('quiz')} disabled={page==='quiz'}>Start Quiz</button>
       </footer>
     </div>
   );

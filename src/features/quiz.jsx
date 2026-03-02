@@ -4,19 +4,19 @@ let questions = [
     "Who was the most listened artist in 2017?",
     "Who performs the song Lean On from 2015?",
     "What music developed out of the UK rave scene and Jamaican sound system culture?",
+    "Who is the most listened female artist in 2020?",
+    "True or False: Ed Sheeran is the UK's most listened artist of the decade?",
+    "Eminem has his own film, what is it's name?"
 ];
 
 let answers = [
     "ed sheeran", 
-    "dj snake, major lazer", 
-    "jungle"];
+    "major lazer", 
+    ["jungle", "grime", "drum and bass"],
+    ["billie eilish", "taylor swift", "ariana grande"],
+    "true",
+    "8 mile"
+];
 
-function questionPicker(arr, ans) {
-    const q = Math.floor(Math.random() * arr.length);
-    arr.splice(arr.indexOf(q), 1);
-    ans.splice(ans.indexOf(q), 1);
-    return q;
-}
-
-const quiz = {questions, answers, questionPicker};
+const quiz = {questions, answers};
 export default quiz;
