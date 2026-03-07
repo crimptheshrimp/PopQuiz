@@ -12,7 +12,7 @@ const App = () => {
 
   return (
     <div>
-      <header>
+      <header className="border">
         <h1 id="app-title">Quizlet
           <button  id="home-button" onClick={() => setPage('home')}>Home</button>
         </h1>

@@ -1,12 +1,27 @@
+* {
+  font-family: 'Times New Roman', serif;
+  text-align: center;
+  font-size: 22px;
+}
+
+body {
+  border-left: 120px solid #31572C;
+  height: 100vh;
+}
+
 header {
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: bold;
-  margin: auto;
-  padding: 20px;
+  border-top: 120px solid #31572C;
+  
 }
 
 button {
+  font-family: Arial, Helvetica, sans-serif;
   margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
   padding: 10px 10px;
   font-size: 0.8em;
   font-weight: bold;
@@ -17,14 +32,81 @@ button {
   cursor: pointer;
 }
 
+li {
+  list-style-type: none;
+  padding: 0;
+}
+
+.radio {
+  display: block;
+  position: relative;
+  padding-left: 5px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+}
+
+.img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  margin: 40px;
+  align-self: center;
+  border-color:blanchedalmond;
+  border-width: 10px;
+  border-style: solid;
+  border-radius: 5%;
+}
+
 #app-title {
   display: flex;
-  align-items: center;
-  font-size: 1.5em;
+  align-items: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.5em;
   font-weight: bold;
+  margin: -90px 180px auto;
+  color: white;
+}
+
+#rules {
   margin: 20px auto;
+  font-size: 1.2em;
 }
 
 #home-button {
-  position: right;
+  position: fixed;
+  top: 0px;
+  right: 200px;
+}
+
+#questionNum {
+  position: fixed;
+  left: 30px;
+  top: 150px;          
+  font-size: 2em;
+  font-weight: bold;
+  background-color: lightgrey;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0;
+}
+
+#start-quiz-button {
+  font-size: 2em;
+  position: fixed;
+  bottom: 40px;
+  right: 100px;
+  background-color: grey;
+}
+
+#scoreDisplay {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  bottom: 50px;
 }

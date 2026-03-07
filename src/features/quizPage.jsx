@@ -11,10 +11,12 @@ const QuizPage = () => {
     const [questionNum, setQuestionNum] = useState(0);
     const [currentQ, setCurrentQ] = useState('This is the example question. Is this quiz named Chris\'s quiz?');
     const [currentAns, setCurrentAns] = useState('nope with a little bit of sauce');
-    const [options, setOptions] = useState([]); // for multiple‑choice
+    const [options, setOptions] = useState([]); 
     const [quizComplete, setQuizComplete] = useState(false);
+    const [multipleChoice, setMultipleChoice] = useState(false);
 
     const showNextQuestion = () => {
+        setMultipleChoice(false);
         // score check uses the arrayAns answer (first element of array)
         const arrayAns = Array.isArray(currentAns) ? currentAns[0] : currentAns;
         //first check the answer to the current question, and update score if correct
@@ -42,7 +44,7 @@ const QuizPage = () => {
         if (Array.isArray(nextA)) {
             // store the correct answer (first in original array)
             const correctAnswer = nextA[0];
-            
+            setMultipleChoice(true);
             // shuffle the choices for display
             const shuffled = [...nextA].sort(() => Math.random() - 0.5);
             setOptions(shuffled);
@@ -67,23 +69,33 @@ const QuizPage = () => {
                 </h1>
             ) : (
                 <> 
-                    <h1>{questionNum}. <br />{currentQ}</h1>
-                    {options.length > 0 && (
+                    <h1 id="questionNum">{questionNum}. </h1> <br /> <h1>{currentQ}</h1>
+                    {multipleChoice ? (
                         <div>
                             <p>Multiple choice question! The options are:</p>
-                            <ol>
-                                {options.map((opt, idx) => (
-                                    <li key={idx}>{opt}</li>
-                                ))}
-                            </ol>
+                            {options.map((opt, idx) => (
+                                <div key={idx}>
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            name="multipleChoice"
+                                            value={opt}
+                                            checked={userAnswer === opt}
+                                            onChange={(e) => setUserAnswer(e.target.value)}
+                                        />
+                                        {opt}
+                                    </label>
+                                </div>
+                            ))}
                         </div>
+                    ) : (
+                        <input
+                            id="answerInput"
+                            type="text"
+                            value={userAnswer}
+                            onChange={(e) => setUserAnswer(e.target.value)}
+                        /> 
                     )}
-                    <input
-                        id="answerInput"
-                        type="text"
-                        value={userAnswer}
-                        onChange={(e) => setUserAnswer(e.target.value)}
-                    />
                     <button
                         id="nextButton"
                         onClick={showNextQuestion}
@@ -91,7 +103,7 @@ const QuizPage = () => {
                         Submit
                     </button>
                     <p>Click "Submit" to submit your answer.</p>
-                    {questionNum > 0 && <p>{score} out of {questionNum - 1} correct.</p>}
+                    {questionNum > 0 && <p id="scoreDisplay">{score} out of {questionNum - 1} correct.</p>}
                 </>
             )}
         </div>

@@ -2,7 +2,7 @@
 
 let questions = [
     "Who was the most listened artist in 2017?",
-    "Who performs the song Lean On from 2015?",
+    "The song 'Lean On' from 2015 is performed by DJ Snake and which other artist?",
     "What music developed out of the UK rave scene and Jamaican sound system culture?",
     "Who is the most listened female artist in 2020?",
     "True or False: Ed Sheeran is the UK's most listened artist of the decade?",
