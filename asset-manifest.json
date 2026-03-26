@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "https://crimptheshrimp.github.io/PopQuiz/ /static/css/main.05886d8a.css",
-    "main.js": "https://crimptheshrimp.github.io/PopQuiz/ /static/js/main.ddc13172.js",
+    "main.css": "https://crimptheshrimp.github.io/PopQuiz/ /static/css/main.c55a9582.css",
+    "main.js": "https://crimptheshrimp.github.io/PopQuiz/ /static/js/main.fa07eaab.js",
     "static/js/453.6cca8034.chunk.js": "https://crimptheshrimp.github.io/PopQuiz/ /static/js/453.6cca8034.chunk.js",
     "index.html": "https://crimptheshrimp.github.io/PopQuiz/ /index.html",
-    "main.05886d8a.css.map": "https://crimptheshrimp.github.io/PopQuiz/ /static/css/main.05886d8a.css.map",
-    "main.ddc13172.js.map": "https://crimptheshrimp.github.io/PopQuiz/ /static/js/main.ddc13172.js.map",
+    "main.c55a9582.css.map": "https://crimptheshrimp.github.io/PopQuiz/ /static/css/main.c55a9582.css.map",
+    "main.fa07eaab.js.map": "https://crimptheshrimp.github.io/PopQuiz/ /static/js/main.fa07eaab.js.map",
     "453.6cca8034.chunk.js.map": "https://crimptheshrimp.github.io/PopQuiz/ /static/js/453.6cca8034.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.05886d8a.css",
-    "static/js/main.ddc13172.js"
+    "static/css/main.c55a9582.css",
+    "static/js/main.fa07eaab.js"
   ]
 }
