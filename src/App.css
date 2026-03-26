@@ -78,10 +78,10 @@ li {
 
 #answerInput {
   position: absolute;
-  left: 50%;
-  transform: translate(-50%);
+  left: 40%;
   text-align: center;
   border: 3px solid black;
+  margin: 50px;
 }
 
 #app-title {
@@ -96,6 +96,7 @@ li {
 
 #submitSection {
   position: absolute;
+  navigation: sticky;
   top: 55%;
   left: 50%;
   transform: translate(-50%,-50%);
